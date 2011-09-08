@@ -8,6 +8,10 @@ Then, in your footer/on `$(document).ready()`/asynchronously you can just call `
 
 This shim won't work without modification for code which requires `document.write()`ten elements to be inserted *at the position of the `document.write()` call*, but it's a great for things like Google Analytics, third-party Javascript libraries or other scripts which insert absolutely-positioned divs (ie, where their position in the DOM isn't always vitally important).
 
+##Source Code##
+
+Source code is available [on github](https://github.com/shaper-pmp/docwriteshim).
+
 ## Footnotes ##
 
 [1]: Modifying the DOM while it's being constructed always used to be the only way to do it, at least until the DOM API came along. However, it leaves your code open to all sorts of race conditions and arbitrary/impossible-to-predict timing issues, and can sometimes royally screw up your DOM - duplicating elements, prematurely closing elements, even preventing whole subtrees of elements from being included.  Moreover, a few hundredths of a second in loading time, or a change to a completely unrelated element elsewhere on the page can cause, prevent or utterly change the symptoms, making it all but impossible to diagnose if you don't recognise the symptoms.
