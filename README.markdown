@@ -1,3 +1,5 @@
+# Introduction #
+
 If you have to deal with a lot of different legacy systems which use `document.write()` to add to the DOM as it's being constructed (these days, a big javascript no-no[1]), you may find this code helpful.
 
 Insert it at the top of the page before any calls to `document.write`, and it overwrites `document.write` with a function which stores up all the code which would otherwise be written to the page in the order it would be added.
