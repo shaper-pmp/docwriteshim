@@ -8,6 +8,4 @@ This shim won't work without modification for code which requires `document.writ
 
 ## Footnotes ##
 
-[1]: Modifying the DOM while it's being constructed always used to be the only way to do it, at least until the DOM API came along. However, it leaves your code open to all sorts of race conditions and arbitrary/impossible-to-predict timing issues, and can sometimes royally screw up your DOM - duplicating elements, prematurely closing elements, even preventing whole subtrees of elements from being included.
-
-    Moreover, a few hundredths of a second in loading time, or a change to a completely unrelated element elsewhere on the page can cause, prevent or utterly change the symptoms, making it all but impossible to diagnose if you don't recognise the symptoms.
+[1]: Modifying the DOM while it's being constructed always used to be the only way to do it, at least until the DOM API came along. However, it leaves your code open to all sorts of race conditions and arbitrary/impossible-to-predict timing issues, and can sometimes royally screw up your DOM - duplicating elements, prematurely closing elements, even preventing whole subtrees of elements from being included.  Moreover, a few hundredths of a second in loading time, or a change to a completely unrelated element elsewhere on the page can cause, prevent or utterly change the symptoms, making it all but impossible to diagnose if you don't recognise the symptoms.
